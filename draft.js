@@ -1,80 +1,46 @@
-let name = prompt(`Hello and welcome to ZIMTECH bank. 
-Thank you for banking with us. Please enter your name: `);
 
+//Previous check pin function
 const enterPin = () => {
 
-        
-
-        let userPin = prompt(`Hello, Please enter your pin: `);
-
-        for(let i = 1; i < 4; i++){
-
-        if(userPin == 0161)
-        {
-            options()
-           
-        }
-        elseif(userPin != 0161);
-
-        alert("You have exceeded your attepts, you pin has been blocked");
-        
-
+    let attempts = 1;
+    let userPin;
+    
+    
+    userPin = prompt("Please enter your pin: ");
+    if(userPin === pinNum){
+        withdrawCash()
+       
     }
-}
-
-const 
-
-
-
-
-
-
-
-
-
-
-    const deposit = () => {
-
-        let accBal = 1000
-
-        let depositAmount = prompt(`How much cash would you like to deposit?`);
+    while(userPin !== pinNum && attempts <= 3)
+    do{
+        (attempts++)
+        prompt(`please enter correct pin. You have had ${attempts} attempt(s).`);
         
-        if(number(depositAmount > 250))
-        {
-            alert("You can deposit upto 250 per day maximum");
-        }    
-        
-        elseif(number(depositAmount <= 250))
-        {
+        if(attempts === 0){
             
-            alert(`You have an account balance of ${accBal + depositAmount}`);
+            alert("Sorry, you have exceeded your attepts");
         }
-    
-        
-    
-     }
-    
-
-    
-
-
-    const checkBal = () => {
-        let accBal = 1000;
-        
-        alert(`You have ${accBal}`);
-        let answer = prompt("Would you like another service? Answer yes or no: ");
-        if(answer == "YES".toLowerCase());
-        {
-            options()
-        }
-        if(answer = "NO".toLowerCase());
-        {
-            alert(`Thank for using ZIMTECH, goodbye ${name}.`);
-        }
-    
     
        }
+    
+    while(true)
+}
 
 
-       enterPin()
-       deposit()
+
+var personalDetails = ['charmaine', '0161', 'female', 'manchester', 'libra'];
+
+
+//9. Currency converter
+
+//const changeCurr = (currency='GBP', lang='en') => {
+    // if (typeof currency == 'undefined') {
+    // currency = 'GBP';
+    // }
+    // if (typeof lang == 'undefined') {
+    // currency = 'en';
+    // }
+    //console.log(currency);
+    //console.log(lang)
+
+
